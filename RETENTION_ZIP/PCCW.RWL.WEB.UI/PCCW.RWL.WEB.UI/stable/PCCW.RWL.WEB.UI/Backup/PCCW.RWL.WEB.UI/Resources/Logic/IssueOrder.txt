@@ -1,0 +1,30 @@
+﻿review T+ formula in RWL as follow.
+
+ 
+
+For mobile Lite order
+
+1. Contract effective Date = T+3 working date (T=actual delivery date) T+ not include Sunday & Public Holiday
+
+2. Delivery Date = T+3 working day (T=issue date) T+ not include Sunday & Public Holiday
+
+3. Service Activation Date = T+3 working date (T=actual delivery date) T+ not include Sunday & Public Holiday
+
+ 
+
+For 3G retention HS order
+
+1. Contract effective date = default as T+3 and must before T+5 (T=-issue date) T+ also include Saturday, Sunday & Public Holiday
+
+2. Delivery date = T+1 or later (T=contract effective date) T+ not include Sunday & Public Holiday
+
+ 
+
+For 3G retention Sim order
+
+1. Contract effective date = default as T+3 (T=issue date) T+ also include Saturday, Sunday & Public Holiday
+
+2. Delivery date = T+1 or later (T= contract effective date) T+ not include Sunday & Public Holiday
+
+ 
+

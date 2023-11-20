@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCCW.RWL.WEB.UI", "PCCW.RWL.WEB.UI\PCCW.RWL.WEB.UI.csproj", "{0341C716-598C-4FC4-898F-98A668F93A21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0341C716-598C-4FC4-898F-98A668F93A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0341C716-598C-4FC4-898F-98A668F93A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0341C716-598C-4FC4-898F-98A668F93A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0341C716-598C-4FC4-898F-98A668F93A21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE7F4287-8E26-44CD-9184-29095AB8A570}
+	EndGlobalSection
+EndGlobal

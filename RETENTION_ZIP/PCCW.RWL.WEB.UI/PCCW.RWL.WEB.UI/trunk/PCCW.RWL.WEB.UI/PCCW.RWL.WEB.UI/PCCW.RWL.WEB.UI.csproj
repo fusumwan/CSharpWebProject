@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0341C716-598C-4FC4-898F-98A668F93A21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PCCW.RWL.WEB.UI</RootNamespace>
+    <AssemblyName>PCCW.RWL.WEB.UI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Nonshipping>true</Nonshipping>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30512.17815, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ShareLib\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Neuron.Net.EntityFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Neuron.Net.EntityFramework\trunk\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\bin\Release\Neuron.Net.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="PCCW.RWL.COMMON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\PCCW.RWL.COMMON\trunk\PCCW.RWL.COMMON\PCCW.RWL.COMMON\bin\Release\PCCW.RWL.COMMON.dll</HintPath>
+    </Reference>
+    <Reference Include="PCCW.RWL.CORE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\PCCW.RWL.CORE\trunk\PCCW.RWL.CORE\PCCW.RWL.CORE\bin\Release\PCCW.RWL.CORE.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttachHandler\AttachmentHandlerJs.cs" />
+    <Compile Include="CommonFunc.cs" />
+    <Compile Include="Order\MobileOrderAddressUserControl.cs" />
+    <Compile Include="Order\MobileOrderMNPDetailUserControl.cs" />
+    <Compile Include="Order\MobileOrderScriptControl.cs" />
+    <Compile Include="Order\MobileOrderThreePartyUserControl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AttachmentHandlerScript.cs" />
+    <Compile Include="Resources\Behavior.cs" />
+    <Compile Include="Resources\BusinessVasAutoSelectScripts.cs" />
+    <Compile Include="Resources\MobileOrderAddressUserControlJS.cs" />
+    <Compile Include="Resources\MobileRetentionOrderAddModifyScripts.cs" />
+    <Compile Include="Resources\MobileRetentionOrderCreateScripts.cs" />
+    <Compile Include="Resources\OrderScript.cs" />
+    <Compile Include="Resources\PreviousOrderModifyNoCheckScripts.cs" />
+    <Compile Include="Resources\PreviousOrderModifyScripts.cs" />
+    <Compile Include="UserControlRequest\MobileOrderAddressUserControlRequest.cs" />
+    <Compile Include="UserControlRequest\MobileOrderMNPDetailUserControlRequest.cs" />
+    <Compile Include="UserControlRequest\MobileOrderThreePartyUserControlRequest.cs" />
+    <Compile Include="Vas\BusinessVasAutoSelectScriptsLibrary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Behavior.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MobileOrderAddressUserControlJS.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MobileRetentionOrderAddModifyScripts.js" />
+    <EmbeddedResource Include="Resources\MobileRetentionOrderCreateScripts.js" />
+    <EmbeddedResource Include="Resources\OrderScript.js" />
+    <EmbeddedResource Include="Resources\PreviousOrderModifyNoCheckScripts.js" />
+    <EmbeddedResource Include="Resources\PreviousOrderModifyScripts.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BusinessVasAutoSelectScripts.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AttachmentHandlerScript.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

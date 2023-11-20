@@ -1,0 +1,9 @@
+﻿retrieve order as below (T = today)
+
+ 
+
+create date = T è retrieve “New HS Order (rwl_W_hs)” & “New non HS Order (rwl_wo_hs)” 
+
+create date = T-1 è retrieve “cancellation (rwl_del)”, “suspension (rwl_suspend)”, “opt out order (rwl_opt_out)”
+
+create date = blank è retrieve “modification with contract (rwl_mod_w_con)” & “fallout replied”
