@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7415E15F-51BB-439B-9FF7-02FE28A5044B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PCCW.RWL.CORE</RootNamespace>
+    <AssemblyName>PCCW.RWL.CORE</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ShareLib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Neuron.Net.EntityFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\bin\Release\Neuron.Net.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ShareLib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="PCCW.RWL.COMMON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\PCCW.RWL.COMMON\stable\PCCW.RWL.COMMON\PCCW.RWL.COMMON\bin\Release\PCCW.RWL.COMMON.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PCCW.RWL.CORE\AccessRightControl\AccessRightControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\ASIMDetail\SimMrtControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\ASIMDetail\SimMrtControlEntity.cs" />
+    <Compile Include="PCCW.RWL.CORE\AssignForm\FromRegisterControler.cs" />
+    <Compile Include="PCCW.RWL.CORE\AutoAssign\AssignAOIMEI.cs" />
+    <Compile Include="PCCW.RWL.CORE\AutoSelectionSystem\BusinessModel\AutoSelectionBusinessTradeHelper.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\AssetHandSet\HandSetEnviroment.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\BundleMappingPropertyControler.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\BusinessContractPeriodControler.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\BusinessDeliveryFalloutProfile.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\BusinessRatePlanManagement.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\DayCount\DayCountFlagControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\DayCount\DayCountFlagControlEntity.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\DeliveryDetail\DeliveryTimeTrackable.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\DeliveryDetail\LocationTimeMemory.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\EDFProfile\EDFAOControler.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\EDFProfile\EDFHelper.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\EDFProfile\EDFRWLCombineSynchronization.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\FreeBusinessRelationControler.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\MobileGList\MobileGList.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\MobileOrderAllowToEDFChk.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\ORGFee\ORGFeeProfile.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\PaymentSystem\PaymentOfferProfile.cs" />
+    <Compile Include="PCCW.RWL.CORE\BusinessControl\RebateControl\RebateProfileControler.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\EDFProfile\EDFStatusProfile.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\EDFProfile\FindNoAORecordInsert.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\EDFProfile\FindNoEdfRecordInsert.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\EDFProfile\SundayActivation.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\AssignIMEIControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftControlEntity.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftIMEIControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftIMEIControlEntity.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\IGiftControlEntityRepository.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\IGiftIMEIControlEntityRepository.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIAccessory\AccessoryIMEIControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIAccessory\AccessoryIMEIControlEntity.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIGiftStatusControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIGiftStatusControlEntity.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIManagementTool.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEISoldAwaitControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEISoldAwaitControlEntity.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEISTATUS.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEI_StockBal.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\InStockManagement\AoInStockControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\InStockManagement\AoInStockControlEntity.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\InStockManagement\IAoInStockControlEntityRepository.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\SIMControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\SIMControlEntity.cs" />
+    <Compile Include="PCCW.RWL.CORE\GowirelessAction\IODBMrtGwChkEntityRepository.cs" />
+    <Compile Include="PCCW.RWL.CORE\GowirelessAction\ODBMrtGwChk.cs" />
+    <Compile Include="PCCW.RWL.CORE\GowirelessAction\ODBMrtGwChkEntity.cs" />
+    <Compile Include="PCCW.RWL.CORE\JavascriptHolder\JavascriptHolder.cs" />
+    <Compile Include="PCCW.RWL.CORE\JSController\JSController.cs" />
+    <Compile Include="PCCW.RWL.CORE\LoggingModule\ErrorMonitor.cs" />
+    <Compile Include="PCCW.RWL.CORE\LoggingModule\LoggingModule.cs" />
+    <Compile Include="PCCW.RWL.CORE\MobileConsider\MobileCsaOperationCenter.cs" />
+    <Compile Include="PCCW.RWL.CORE\MobileConsider\MobileOrderViewControler.cs" />
+    <Compile Include="PCCW.RWL.CORE\MobileConsider\MobileSequentialCountProfile.cs" />
+    <Compile Include="PCCW.RWL.CORE\MobileOneLevel\MobileOneLevel.cs" />
+    <Compile Include="PCCW.RWL.CORE\MobileOrderLock\CurrentLockStatus.cs" />
+    <Compile Include="PCCW.RWL.CORE\MobileOrderLock\MobileOrderLock.cs" />
+    <Compile Include="PCCW.RWL.CORE\MobileOrderLock\MobileOrderLockControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\MobileOrderLock\MobileOrderLockHistory.cs" />
+    <Compile Include="PCCW.RWL.CORE\PublicHousing\PublicHousingOfferSelectFilter.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\AccessoryReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\AutoSelectionPropertyReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\BankCodeReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\BundleMappingReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\BusinessTradeReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\BusinessVasDescriptionReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\BusinessVasReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\DOAProfileRecordReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\ErrorLogReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\FaultReporterReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\GiftBasketReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\HandSetOfferedBasketReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\MobileOrderFalloutReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\MobileOrderMonthlyFeeReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\MobileOrderReportReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\ProductItemCodeReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\PYReportFunc.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PCCW.RWL.CORE\RawReport\RebateGroupReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\RetentionPlanReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\SpecialCustomerReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\SpecialPremiumReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\SuspendEventDetailReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RawReport\TariffFeeScheduleReport.cs" />
+    <Compile Include="PCCW.RWL.CORE\RWLFramework\RWLFramework.cs" />
+    <Compile Include="PCCW.RWL.CORE\RWLOrderReport\RwlReportSYSControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\RWLOrderReport\RwlReportSYSControlEntity.cs" />
+    <Compile Include="PCCW.RWL.CORE\SaleManCode\SaleManCodeProfile.cs" />
+    <Compile Include="PCCW.RWL.CORE\SaleManCode\TradeSystem\TradingSystemHandSetProvider.cs" />
+    <Compile Include="PCCW.RWL.CORE\SaleManCode\TradeSystem\TradingSystemPremiumProvider.cs" />
+    <Compile Include="PCCW.RWL.CORE\SERIAL\OrderSerialNumberControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\VasControl\VasAutoSetScript.cs" />
+    <Compile Include="PCCW.RWL.CORE\VasControl\VasControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\VasControl\VasViewerControler.cs" />
+    <Compile Include="PCCW.RWL.CORE\VasCreateHolder\VasCreateHolderControl.cs" />
+    <Compile Include="PCCW.RWL.CORE\VasCreateHolder\VasDrpAtt.cs" />
+    <Compile Include="PCCW.RWL.CORE\WebFunc\BehaviorCall\WebFunc.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PCCW.RWL.DESIGN\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

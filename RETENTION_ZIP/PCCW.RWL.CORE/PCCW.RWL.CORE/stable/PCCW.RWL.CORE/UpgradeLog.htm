@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+ <html xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><meta content="en-us" http-equiv="Content-Language" /><meta content="text/html; charset=utf-16" http-equiv="Content-Type" /><title _locID="ConversionReport0">
+          Migration Report
+        </title><style> 
+                    /* Body style, for the entire document */
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    /* Header1 style, used for the main title */
+                    h1
+                    {
+                        padding: 10px 0px 10px 10px;
+                        font-size: 21pt;
+                        background-color: #E2E2E2;
+                        border-bottom: 1px #C1C1C2 solid; 
+                        color: #201F20;
+                        margin: 0;
+                        font-weight: normal;
+                    }
+
+                    /* Header2 style, used for "Overview" and other sections */
+                    h2
+                    {
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                    }
+
+                    /* Header3 style, used for sub-sections, such as project name */
+                    h3
+                    {
+                        font-weight: normal;
+                        font-size: 15pt;
+                        margin: 0;
+                        padding: 15px 0 5px 0;
+                        background-color: transparent;
+                    }
+
+                    /* Color all hyperlinks one color */
+                    a
+                    {
+                        color: #1382CE;
+                    }
+
+                    /* Table styles */ 
+                    table
+                    {
+                        border-spacing: 0 0;
+                        border-collapse: collapse;
+                        font-size: 10pt;
+                    }
+
+                    table th
+                    {
+                        background: #E7E7E8;
+                        text-align: left;
+                        text-decoration: none;
+                        font-weight: normal;
+                        padding: 3px 6px 3px 6px;
+                    }
+
+                    table td
+                    {
+                        vertical-align: top;
+                        padding: 3px 6px 5px 5px;
+                        margin: 0px;
+                        border: 1px solid #E7E7E8;
+                        background: #F7F7F8;
+                    }
+
+                    /* Local link is a style for hyperlinks that link to file:/// content, there are lots so color them as 'normal' text until the user mouse overs */
+                    .localLink
+                    {
+                        color: #1E1E1F;
+                        background: #EEEEED;
+                        text-decoration: none;
+                    }
+
+                    .localLink:hover
+                    {
+                        color: #1382CE;
+                        background: #FFFF99;
+                        text-decoration: none;
+                    }
+
+                    /* Center text, used in the over views cells that contain message level counts */ 
+                    .textCentered
+                    {
+                        text-align: center;
+                    }
+
+                    /* The message cells in message tables should take up all avaliable space */
+                    .messageCell
+                    {
+                        width: 100%;
+                    }
+
+                    /* Padding around the content after the h1 */ 
+                    #content 
+                    {
+	                    padding: 0px 12px 12px 12px; 
+                    }
+
+                    /* The overview table expands to width, with a max width of 97% */ 
+                    #overview table
+                    {
+                        width: auto;
+                        max-width: 75%; 
+                    }
+
+                    /* The messages tables are always 97% width */
+                    #messages table
+                    {
+                        width: 97%;
+                    }
+
+                    /* All Icons */
+                    .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+                    {
+                        min-width:18px;
+                        min-height:18px; 
+                        background-repeat:no-repeat;
+                        background-position:center;
+                    }
+
+                    /* Success icon encoded */
+                    .IconSuccessEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconSuccess#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+                    }
+
+                    /* Information icon encoded */
+                    .IconInfoEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconInformation#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+                    }
+
+                    /* Warning icon encoded */
+                    .IconWarningEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconWarning#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+                    }
+
+                    /* Error icon encoded */
+                    .IconErrorEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconError#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+                    }
+                 </style><script type="text/javascript" language="javascript"> 
+          
+            // Startup 
+            // Hook up the the loaded event for the document/window, to linkify the document content
+            var startupFunction = function() { linkifyElement("messages"); };
+            
+            if(window.attachEvent)
+            {
+              window.attachEvent('onload', startupFunction);
+            }
+            else if (window.addEventListener) 
+            {
+              window.addEventListener('load', startupFunction, false);
+            }
+            else 
+            {
+              document.addEventListener('load', startupFunction, false);
+            } 
+            
+            // Toggles the visibility of table rows with the specified name 
+            function toggleTableRowsByName(name)
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  if(!!currentName && currentName.indexOf(name) == 0)
+                  {
+                      var isVisible = allRows[i].style.display == ''; 
+                      isVisible ? allRows[i].style.display = 'none' : allRows[i].style.display = '';
+                  }
+               }
+            }
+            
+            function scrollToFirstVisibleRow(name) 
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  var isVisible = allRows[i].style.display == ''; 
+                  if(!!currentName && currentName.indexOf(name) == 0 && isVisible)
+                  {
+                     allRows[i].scrollIntoView(true); 
+                     return true; 
+                  }
+               }
+               
+               return false;
+            }
+            
+            // Linkifies the specified text content, replaces candidate links with html links 
+            function linkify(text)
+            {
+                 if(!text || 0 === text.length)
+                 {
+                     return text; 
+                 }
+
+                 // Find http, https and ftp links and replace them with hyper links 
+                 var urlLink = /(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.]+(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?\,\/\\\+&%\$#\=~;\{\}])*/gi;
+                 
+                 return text.replace(urlLink, '<a href="$&">$&</a>') ;
+            }
+            
+            // Linkifies the specified element by ID
+            function linkifyElement(id)
+            {
+                var element = document.getElementById(id);
+                if(!!element)
+                {
+                  element.innerHTML = linkify(element.innerHTML); 
+                }
+            }
+            
+            function ToggleMessageVisibility(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              toggleTableRowsByName("MessageRowClass" + projectName);
+              toggleTableRowsByName('MessageRowHeaderShow' + projectName);
+              toggleTableRowsByName('MessageRowHeaderHide' + projectName); 
+            }
+            
+            function ScrollToFirstVisibleMessage(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              // First try the 'Show messages' row
+              if(!scrollToFirstVisibleRow('MessageRowHeaderShow' + projectName))
+              {
+                // Failed to find a visible row for 'Show messages', try an actual message row 
+                scrollToFirstVisibleRow('MessageRowClass' + projectName); 
+              }
+            }
+           </script></head><body><h1 _locID="ConversionReport">
+          Migration Report - PCCW.RWL.CORE</h1><div id="content"><h2 _locID="OverviewTitle">Overview</h2><div id="overview"><table><tr><th></th><th _locID="ProjectTableHeader">Project</th><th _locID="PathTableHeader">Path</th><th _locID="ErrorsTableHeader">Errors</th><th _locID="WarningsTableHeader">Warnings</th><th _locID="MessagesTableHeader">Messages</th></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#Solution"><span _locID="OverviewSolutionSpan">Solution</span></a></strong></td><td>PCCW.RWL.CORE.sln</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#SolutionWarning">1</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('Solution'); return false;">2</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#PCCW.RWL.CORE">PCCW.RWL.CORE</a></strong></td><td>PCCW.RWL.CORE\PCCW.RWL.CORE.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('PCCW.RWL.CORE'); return false;">104</a></td></tr></table></div><h2 _locID="SolutionAndProjectsTitle">Solution and projects</h2><div id="messages"><a name="Solution" /><h3 _locID="ProjectDisplayNameHeader">Solution</h3><table><tr id="SolutionHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassSolution"><td class="IconWarningEncoded"><a name="SolutionWarning" /></td><td class="messageCell"><strong>PCCW.RWL.CORE.sln:
+        </strong><span>Visual Studio needs to make non-functional changes to this project in order to enable the project to open in released versions of Visual Studio newer than Visual Studio 2010 SP1 without impacting project behavior.</span></td></tr><tr name="MessageRowHeaderShowSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Show 2 additional messages
+        </a></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE.sln:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE.sln</span></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE.sln:
+        </strong><span>Solution migrated successfully</span></td></tr><tr style="display: none" name="MessageRowHeaderHideSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Hide 2 additional messages
+        </a></td></tr></table><a name="PCCW.RWL.CORE" /><h3>PCCW.RWL.CORE</h3><table><tr id="PCCW.RWL.COREHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="MessageRowHeaderShowPCCW.RWL.CORE"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="PCCW.RWL.COREMessage" onclick="ToggleMessageVisibility('PCCW.RWL.CORE'); return false;">
+          Show 104 additional messages
+        </a></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE.csproj:
+        </strong><span>Project file successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE.csproj</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\AccessRightControl\AccessRightControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\AccessRightControl\AccessRightControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\ASIMDetail\SimMrtControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\ASIMDetail\SimMrtControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\ASIMDetail\SimMrtControlEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\ASIMDetail\SimMrtControlEntity.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\AssignForm\FromRegisterControler.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\AssignForm\FromRegisterControler.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\AutoAssign\AssignAOIMEI.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\AutoAssign\AssignAOIMEI.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\AutoSelectionSystem\BusinessModel\AutoSelectionBusinessTradeHelper.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\AutoSelectionSystem\BusinessModel\AutoSelectionBusinessTradeHelper.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\AssetHandSet\HandSetEnviroment.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\AssetHandSet\HandSetEnviroment.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\BundleMappingPropertyControler.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\BundleMappingPropertyControler.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\BusinessContractPeriodControler.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\BusinessContractPeriodControler.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\BusinessDeliveryFalloutProfile.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\BusinessDeliveryFalloutProfile.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\BusinessRatePlanManagement.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\BusinessRatePlanManagement.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\DayCount\DayCountFlagControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\DayCount\DayCountFlagControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\DayCount\DayCountFlagControlEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\DayCount\DayCountFlagControlEntity.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\DeliveryDetail\DeliveryTimeTrackable.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\DeliveryDetail\DeliveryTimeTrackable.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\DeliveryDetail\LocationTimeMemory.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\DeliveryDetail\LocationTimeMemory.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\EDFProfile\EDFAOControler.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\EDFProfile\EDFAOControler.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\EDFProfile\EDFHelper.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\EDFProfile\EDFHelper.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\EDFProfile\EDFRWLCombineSynchronization.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\EDFProfile\EDFRWLCombineSynchronization.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\FreeBusinessRelationControler.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\FreeBusinessRelationControler.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\MobileGList\MobileGList.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\MobileGList\MobileGList.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\MobileOrderAllowToEDFChk.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\MobileOrderAllowToEDFChk.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\ORGFee\ORGFeeProfile.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\ORGFee\ORGFeeProfile.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\PaymentSystem\PaymentOfferProfile.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\PaymentSystem\PaymentOfferProfile.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\RebateControl\RebateProfileControler.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\BusinessControl\RebateControl\RebateProfileControler.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\EDFProfile\EDFStatusProfile.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\EDFProfile\EDFStatusProfile.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\EDFProfile\FindNoAORecordInsert.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\EDFProfile\FindNoAORecordInsert.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\EDFProfile\FindNoEdfRecordInsert.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\EDFProfile\FindNoEdfRecordInsert.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\EDFProfile\SundayActivation.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\EDFProfile\SundayActivation.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\AssignIMEIControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\AssignIMEIControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftControlEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftControlEntity.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftIMEIControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftIMEIControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftIMEIControlEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\GiftIMEIControlEntity.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\IGiftControlEntityRepository.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\IGiftControlEntityRepository.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\IGiftIMEIControlEntityRepository.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\GiftLibrary\IGiftIMEIControlEntityRepository.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIAccessory\AccessoryIMEIControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIAccessory\AccessoryIMEIControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIAccessory\AccessoryIMEIControlEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIAccessory\AccessoryIMEIControlEntity.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIGiftStatusControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIGiftStatusControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIGiftStatusControlEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIGiftStatusControlEntity.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIManagementTool.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEIManagementTool.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEISoldAwaitControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEISoldAwaitControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEISoldAwaitControlEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEISoldAwaitControlEntity.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEISTATUS.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEISTATUS.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEI_StockBal.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\IMEI_StockBal.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\InStockManagement\AoInStockControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\InStockManagement\AoInStockControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\InStockManagement\AoInStockControlEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\InStockManagement\AoInStockControlEntity.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\InStockManagement\IAoInStockControlEntityRepository.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\InStockManagement\IAoInStockControlEntityRepository.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\SIMControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\SIMControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\SIMControlEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\EDFModel\IMEIControlLibrary\SIMControlEntity.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\GowirelessAction\IODBMrtGwChkEntityRepository.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\GowirelessAction\IODBMrtGwChkEntityRepository.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\GowirelessAction\ODBMrtGwChk.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\GowirelessAction\ODBMrtGwChk.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\GowirelessAction\ODBMrtGwChkEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\GowirelessAction\ODBMrtGwChkEntity.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\JavascriptHolder\JavascriptHolder.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\JavascriptHolder\JavascriptHolder.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\JSController\JSController.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\JSController\JSController.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\LoggingModule\ErrorMonitor.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\LoggingModule\ErrorMonitor.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\LoggingModule\LoggingModule.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\LoggingModule\LoggingModule.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\MobileConsider\MobileCsaOperationCenter.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\MobileConsider\MobileCsaOperationCenter.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\MobileConsider\MobileOrderViewControler.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\MobileConsider\MobileOrderViewControler.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\MobileConsider\MobileSequentialCountProfile.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\MobileConsider\MobileSequentialCountProfile.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\MobileOneLevel\MobileOneLevel.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\MobileOneLevel\MobileOneLevel.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\MobileOrderLock\CurrentLockStatus.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\MobileOrderLock\CurrentLockStatus.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\MobileOrderLock\MobileOrderLock.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\MobileOrderLock\MobileOrderLock.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\MobileOrderLock\MobileOrderLockControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\MobileOrderLock\MobileOrderLockControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\MobileOrderLock\MobileOrderLockHistory.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\MobileOrderLock\MobileOrderLockHistory.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\PublicHousing\PublicHousingOfferSelectFilter.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\PublicHousing\PublicHousingOfferSelectFilter.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\AccessoryReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\AccessoryReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\AutoSelectionPropertyReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\AutoSelectionPropertyReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\BankCodeReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\BankCodeReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\BundleMappingReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\BundleMappingReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\BusinessTradeReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\BusinessTradeReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\BusinessVasDescriptionReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\BusinessVasDescriptionReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\BusinessVasReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\BusinessVasReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\DOAProfileRecordReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\DOAProfileRecordReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\ErrorLogReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\ErrorLogReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\FaultReporterReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\FaultReporterReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\GiftBasketReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\GiftBasketReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\HandSetOfferedBasketReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\HandSetOfferedBasketReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\MobileOrderFalloutReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\MobileOrderFalloutReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\MobileOrderMonthlyFeeReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\MobileOrderMonthlyFeeReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\MobileOrderReportReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\MobileOrderReportReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\ProductItemCodeReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\ProductItemCodeReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\PYReportFunc.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\PYReportFunc.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\RebateGroupReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\RebateGroupReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\RetentionPlanReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\RetentionPlanReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\SpecialCustomerReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\SpecialCustomerReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\SpecialPremiumReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\SpecialPremiumReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\SuspendEventDetailReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\SuspendEventDetailReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\TariffFeeScheduleReport.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RawReport\TariffFeeScheduleReport.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RWLFramework\RWLFramework.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RWLFramework\RWLFramework.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RWLOrderReport\RwlReportSYSControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RWLOrderReport\RwlReportSYSControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\RWLOrderReport\RwlReportSYSControlEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\RWLOrderReport\RwlReportSYSControlEntity.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\SaleManCode\SaleManCodeProfile.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\SaleManCode\SaleManCodeProfile.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\SaleManCode\TradeSystem\TradingSystemHandSetProvider.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\SaleManCode\TradeSystem\TradingSystemHandSetProvider.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\SaleManCode\TradeSystem\TradingSystemPremiumProvider.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\SaleManCode\TradeSystem\TradingSystemPremiumProvider.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\SERIAL\OrderSerialNumberControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\SERIAL\OrderSerialNumberControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\VasControl\VasAutoSetScript.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\VasControl\VasAutoSetScript.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\VasControl\VasControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\VasControl\VasControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\VasControl\VasViewerControler.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\VasControl\VasViewerControler.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\VasCreateHolder\VasCreateHolderControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\VasCreateHolder\VasCreateHolderControl.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\VasCreateHolder\VasDrpAtt.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\VasCreateHolder\VasDrpAtt.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE\WebFunc\BehaviorCall\WebFunc.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\PCCW.RWL.CORE\WebFunc\BehaviorCall\WebFunc.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\Properties\AssemblyInfo.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\PCCW.RWL.CORE\PCCW.RWL.CORE\stable\PCCW.RWL.CORE\Backup1\PCCW.RWL.CORE\Properties\AssemblyInfo.cs</span></td></tr><tr name="MessageRowClassPCCW.RWL.CORE" style="display: none"><td class="IconInfoEncoded"><a name="PCCW.RWL.COREMessage" /></td><td class="messageCell"><strong>PCCW.RWL.CORE\PCCW.RWL.CORE.csproj:
+        </strong><span>The project file does not require migration. The project will open without modification.</span></td></tr><tr style="display: none" name="MessageRowHeaderHidePCCW.RWL.CORE"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="PCCW.RWL.COREMessage" onclick="ToggleMessageVisibility('PCCW.RWL.CORE'); return false;">
+          Hide 104 additional messages
+        </a></td></tr></table></div></div></body></html>
