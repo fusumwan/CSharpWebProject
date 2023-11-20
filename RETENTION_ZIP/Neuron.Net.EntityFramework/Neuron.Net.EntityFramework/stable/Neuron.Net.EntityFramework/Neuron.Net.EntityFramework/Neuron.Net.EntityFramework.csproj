@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7827E5F-37A8-4D3E-AA5B-A534FE16B315}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Neuron.Net.EntityFramework</RootNamespace>
+    <AssemblyName>Neuron.Net.EntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ShareLib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NeuronCore\AssetFunction\ArrDictionary.cs" />
+    <Compile Include="NeuronCore\AssetFunction\FuncHelper.cs" />
+    <Compile Include="NeuronCore\WebUI\Compression\Compressor.cs" />
+    <Compile Include="NeuronCore\Configurator\BasicConfiguratorManager.cs" />
+    <Compile Include="NeuronCore\Configurator\ConfigEntity.cs" />
+    <Compile Include="NeuronCore\Configurator\ConfiguratorAttribute.cs" />
+    <Compile Include="NeuronCore\Configurator\ConfiguratorAttributeEntity.cs" />
+    <Compile Include="NeuronCore\Configurator\IConfigurator.cs" />
+    <Compile Include="NeuronCore\DBSystem\DBCONNHelper.cs" />
+    <Compile Include="NeuronCore\DsExpression.cs" />
+    <Compile Include="NeuronCore\DSHelper.cs" />
+    <Compile Include="NeuronCore\EntityFramework.cs" />
+    <Compile Include="NeuronCore\EntityFrameworkEnvironment.cs" />
+    <Compile Include="NeuronCore\HsComparer.cs" />
+    <Compile Include="NeuronCore\HsCultureComparer.cs" />
+    <Compile Include="NeuronCore\EntityManagement\IEntity.cs" />
+    <Compile Include="NeuronCore\EntityManagement\IEntityRepository.cs" />
+    <Compile Include="NeuronCore\IDSHelper.cs" />
+    <Compile Include="NeuronCore\IDSQuery.cs" />
+    <Compile Include="NeuronCore\SessionManagement\ISession.cs" />
+    <Compile Include="NeuronCore\SessionManagement\ISessionFactory.cs" />
+    <Compile Include="NeuronCore\ITransaction.cs" />
+    <Compile Include="NeuronCore\DBSystem\MSSQLConn.cs" />
+    <Compile Include="NeuronCore\DBSystem\MSSQLConnect.cs" />
+    <Compile Include="NeuronCore\DBSystem\ODBCConn.cs" />
+    <Compile Include="NeuronCore\DBSystem\ODBCConnect.cs" />
+    <Compile Include="NeuronCore\DBSystem\OLEDBConn.cs" />
+    <Compile Include="NeuronCore\DBSystem\OLEDBConnect.cs" />
+    <Compile Include="NeuronCore\DBSystem\ORACLEConn.cs" />
+    <Compile Include="NeuronCore\DBSystem\ORACLEConnect.cs" />
+    <Compile Include="NeuronCore\SearchItem.cs" />
+    <Compile Include="NeuronCore\SearchUtils.cs" />
+    <Compile Include="NeuronCore\SessionManagement\SessionFactory.cs" />
+    <Compile Include="NeuronCore\SessionManagement\SessionImplementation.cs" />
+    <Compile Include="NeuronCore\DBSystem\SYSConn.cs" />
+    <Compile Include="NeuronCore\LoggerModule\SystemError.cs" />
+    <Compile Include="NeuronCore\SessionManagement\TransactionImplementation.cs" />
+    <Compile Include="NeuronCore\Stock\Hashlist.cs" />
+    <Compile Include="NeuronCore\Stock\StringArr.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\HtmlControlList.cs" />
+    <Compile Include="NeuronCore\WebUI\DataGrid\DataGridEx.cs" />
+    <Compile Include="NeuronCore\WebUI\DataList\DataListEx.cs" />
+    <Compile Include="NeuronCore\WebUI\FormView\FormViewEx.cs" />
+    <Compile Include="NeuronCore\WebUI\GridView\CommandFieldEX.cs" />
+    <Compile Include="NeuronCore\WebUI\GridView\GridViewEx.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\HtmlEvents.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\HTMLSELECT\NHtmlSelect.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\HTMLSELECT\NHtmlSelectOptions.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\HTMLTABLE\NHtmlTable.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\HTMLTABLE\NHtmlTableCell.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\IJSControl.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSAttributes.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSScriptLibrary.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSStyle.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_INPUT.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_LISTITEM.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_LISTITEMCOLLECTION.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_RADIO.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_SELECT.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_TEXTAREA.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSStringBuilder.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\RegisterJS.cs" />
+    <Compile Include="NeuronCore\WebUI\HTMLCONTROL\NHtmlContainerControl.cs" />
+    <Compile Include="NeuronCore\WebUI\LoadingBar\LoadingBar.cs" />
+    <Compile Include="NeuronCore\WebUI\ObjectDataSource\ObjectParameter.cs" />
+    <Compile Include="NeuronCore\WebUI\PageModule\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NeuronCore\WebUI\PageModule\ExportPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NeuronCore\WebUI\Repeater\RepeaterEx.cs" />
+    <Compile Include="NeuronCore\WebUI\ScriptManager\RWLScriptManager.cs" />
+    <Compile Include="NeuronCore\WindowUI\DataGridViewCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NeuronCore\WindowUI\DataGridViewProgress.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NeuronCore\WebUI\HTMLCONTROL\HTMLSPAN\" />
+    <Folder Include="NeuronCore\WebUI\ListView\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

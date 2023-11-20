@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+ <html xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><meta content="en-us" http-equiv="Content-Language" /><meta content="text/html; charset=utf-16" http-equiv="Content-Type" /><title _locID="ConversionReport0">
+          Migration Report
+        </title><style> 
+                    /* Body style, for the entire document */
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    /* Header1 style, used for the main title */
+                    h1
+                    {
+                        padding: 10px 0px 10px 10px;
+                        font-size: 21pt;
+                        background-color: #E2E2E2;
+                        border-bottom: 1px #C1C1C2 solid; 
+                        color: #201F20;
+                        margin: 0;
+                        font-weight: normal;
+                    }
+
+                    /* Header2 style, used for "Overview" and other sections */
+                    h2
+                    {
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                    }
+
+                    /* Header3 style, used for sub-sections, such as project name */
+                    h3
+                    {
+                        font-weight: normal;
+                        font-size: 15pt;
+                        margin: 0;
+                        padding: 15px 0 5px 0;
+                        background-color: transparent;
+                    }
+
+                    /* Color all hyperlinks one color */
+                    a
+                    {
+                        color: #1382CE;
+                    }
+
+                    /* Table styles */ 
+                    table
+                    {
+                        border-spacing: 0 0;
+                        border-collapse: collapse;
+                        font-size: 10pt;
+                    }
+
+                    table th
+                    {
+                        background: #E7E7E8;
+                        text-align: left;
+                        text-decoration: none;
+                        font-weight: normal;
+                        padding: 3px 6px 3px 6px;
+                    }
+
+                    table td
+                    {
+                        vertical-align: top;
+                        padding: 3px 6px 5px 5px;
+                        margin: 0px;
+                        border: 1px solid #E7E7E8;
+                        background: #F7F7F8;
+                    }
+
+                    /* Local link is a style for hyperlinks that link to file:/// content, there are lots so color them as 'normal' text until the user mouse overs */
+                    .localLink
+                    {
+                        color: #1E1E1F;
+                        background: #EEEEED;
+                        text-decoration: none;
+                    }
+
+                    .localLink:hover
+                    {
+                        color: #1382CE;
+                        background: #FFFF99;
+                        text-decoration: none;
+                    }
+
+                    /* Center text, used in the over views cells that contain message level counts */ 
+                    .textCentered
+                    {
+                        text-align: center;
+                    }
+
+                    /* The message cells in message tables should take up all avaliable space */
+                    .messageCell
+                    {
+                        width: 100%;
+                    }
+
+                    /* Padding around the content after the h1 */ 
+                    #content 
+                    {
+	                    padding: 0px 12px 12px 12px; 
+                    }
+
+                    /* The overview table expands to width, with a max width of 97% */ 
+                    #overview table
+                    {
+                        width: auto;
+                        max-width: 75%; 
+                    }
+
+                    /* The messages tables are always 97% width */
+                    #messages table
+                    {
+                        width: 97%;
+                    }
+
+                    /* All Icons */
+                    .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+                    {
+                        min-width:18px;
+                        min-height:18px; 
+                        background-repeat:no-repeat;
+                        background-position:center;
+                    }
+
+                    /* Success icon encoded */
+                    .IconSuccessEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconSuccess#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+                    }
+
+                    /* Information icon encoded */
+                    .IconInfoEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconInformation#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+                    }
+
+                    /* Warning icon encoded */
+                    .IconWarningEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconWarning#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+                    }
+
+                    /* Error icon encoded */
+                    .IconErrorEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconError#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+                    }
+                 </style><script type="text/javascript" language="javascript"> 
+          
+            // Startup 
+            // Hook up the the loaded event for the document/window, to linkify the document content
+            var startupFunction = function() { linkifyElement("messages"); };
+            
+            if(window.attachEvent)
+            {
+              window.attachEvent('onload', startupFunction);
+            }
+            else if (window.addEventListener) 
+            {
+              window.addEventListener('load', startupFunction, false);
+            }
+            else 
+            {
+              document.addEventListener('load', startupFunction, false);
+            } 
+            
+            // Toggles the visibility of table rows with the specified name 
+            function toggleTableRowsByName(name)
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  if(!!currentName && currentName.indexOf(name) == 0)
+                  {
+                      var isVisible = allRows[i].style.display == ''; 
+                      isVisible ? allRows[i].style.display = 'none' : allRows[i].style.display = '';
+                  }
+               }
+            }
+            
+            function scrollToFirstVisibleRow(name) 
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  var isVisible = allRows[i].style.display == ''; 
+                  if(!!currentName && currentName.indexOf(name) == 0 && isVisible)
+                  {
+                     allRows[i].scrollIntoView(true); 
+                     return true; 
+                  }
+               }
+               
+               return false;
+            }
+            
+            // Linkifies the specified text content, replaces candidate links with html links 
+            function linkify(text)
+            {
+                 if(!text || 0 === text.length)
+                 {
+                     return text; 
+                 }
+
+                 // Find http, https and ftp links and replace them with hyper links 
+                 var urlLink = /(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.]+(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?\,\/\\\+&%\$#\=~;\{\}])*/gi;
+                 
+                 return text.replace(urlLink, '<a href="$&">$&</a>') ;
+            }
+            
+            // Linkifies the specified element by ID
+            function linkifyElement(id)
+            {
+                var element = document.getElementById(id);
+                if(!!element)
+                {
+                  element.innerHTML = linkify(element.innerHTML); 
+                }
+            }
+            
+            function ToggleMessageVisibility(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              toggleTableRowsByName("MessageRowClass" + projectName);
+              toggleTableRowsByName('MessageRowHeaderShow' + projectName);
+              toggleTableRowsByName('MessageRowHeaderHide' + projectName); 
+            }
+            
+            function ScrollToFirstVisibleMessage(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              // First try the 'Show messages' row
+              if(!scrollToFirstVisibleRow('MessageRowHeaderShow' + projectName))
+              {
+                // Failed to find a visible row for 'Show messages', try an actual message row 
+                scrollToFirstVisibleRow('MessageRowClass' + projectName); 
+              }
+            }
+           </script></head><body><h1 _locID="ConversionReport">
+          Migration Report - Neuron.Net.EntityFramework</h1><div id="content"><h2 _locID="OverviewTitle">Overview</h2><div id="overview"><table><tr><th></th><th _locID="ProjectTableHeader">Project</th><th _locID="PathTableHeader">Path</th><th _locID="ErrorsTableHeader">Errors</th><th _locID="WarningsTableHeader">Warnings</th><th _locID="MessagesTableHeader">Messages</th></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#Solution"><span _locID="OverviewSolutionSpan">Solution</span></a></strong></td><td>Neuron.Net.EntityFramework.sln</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#SolutionWarning">1</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('Solution'); return false;">2</a></td></tr><tr><td class="IconSuccessEncoded" /><td><strong><a href="#Neuron.Net.EntityFramework">Neuron.Net.EntityFramework</a></strong></td><td>Neuron.Net.EntityFramework\Neuron.Net.EntityFramework.csproj</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('Neuron.Net.EntityFramework'); return false;">75</a></td></tr></table></div><h2 _locID="SolutionAndProjectsTitle">Solution and projects</h2><div id="messages"><a name="Solution" /><h3 _locID="ProjectDisplayNameHeader">Solution</h3><table><tr id="SolutionHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="WarningRowClassSolution"><td class="IconWarningEncoded"><a name="SolutionWarning" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework.sln:
+        </strong><span>Visual Studio needs to make non-functional changes to this project in order to enable the project to open in released versions of Visual Studio newer than Visual Studio 2010 SP1 without impacting project behavior.</span></td></tr><tr name="MessageRowHeaderShowSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Show 2 additional messages
+        </a></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework.sln:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework.sln</span></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework.sln:
+        </strong><span>Solution migrated successfully</span></td></tr><tr style="display: none" name="MessageRowHeaderHideSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          Hide 2 additional messages
+        </a></td></tr></table><a name="Neuron.Net.EntityFramework" /><h3>Neuron.Net.EntityFramework</h3><table><tr id="Neuron.Net.EntityFrameworkHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">Message</th></tr><tr name="MessageRowHeaderShowNeuron.Net.EntityFramework"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="Neuron.Net.EntityFrameworkMessage" onclick="ToggleMessageVisibility('Neuron.Net.EntityFramework'); return false;">
+          Show 75 additional messages
+        </a></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\Neuron.Net.EntityFramework.csproj:
+        </strong><span>Project file successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework.csproj</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\AssetFunction\ArrDictionary.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\AssetFunction\ArrDictionary.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\AssetFunction\FuncHelper.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\AssetFunction\FuncHelper.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\Compression\Compressor.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\Compression\Compressor.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\Configurator\BasicConfiguratorManager.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\Configurator\BasicConfiguratorManager.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\Configurator\ConfigEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\Configurator\ConfigEntity.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\Configurator\ConfiguratorAttribute.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\Configurator\ConfiguratorAttribute.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\Configurator\ConfiguratorAttributeEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\Configurator\ConfiguratorAttributeEntity.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\Configurator\IConfigurator.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\Configurator\IConfigurator.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DBSystem\DBCONNHelper.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DBSystem\DBCONNHelper.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DsExpression.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DsExpression.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DSHelper.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DSHelper.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\EntityFramework.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\EntityFramework.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\EntityFrameworkEnvironment.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\EntityFrameworkEnvironment.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\HsComparer.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\HsComparer.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\HsCultureComparer.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\HsCultureComparer.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\EntityManagement\IEntity.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\EntityManagement\IEntity.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\EntityManagement\IEntityRepository.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\EntityManagement\IEntityRepository.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\IDSHelper.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\IDSHelper.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\IDSQuery.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\IDSQuery.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\SessionManagement\ISession.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\SessionManagement\ISession.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\SessionManagement\ISessionFactory.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\SessionManagement\ISessionFactory.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\ITransaction.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\ITransaction.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DBSystem\MSSQLConn.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DBSystem\MSSQLConn.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DBSystem\MSSQLConnect.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DBSystem\MSSQLConnect.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DBSystem\ODBCConn.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DBSystem\ODBCConn.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DBSystem\ODBCConnect.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DBSystem\ODBCConnect.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DBSystem\OLEDBConn.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DBSystem\OLEDBConn.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DBSystem\OLEDBConnect.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DBSystem\OLEDBConnect.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DBSystem\ORACLEConn.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DBSystem\ORACLEConn.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DBSystem\ORACLEConnect.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DBSystem\ORACLEConnect.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\SearchItem.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\SearchItem.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\SearchUtils.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\SearchUtils.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\SessionManagement\SessionFactory.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\SessionManagement\SessionFactory.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\SessionManagement\SessionImplementation.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\SessionManagement\SessionImplementation.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\DBSystem\SYSConn.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\DBSystem\SYSConn.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\LoggerModule\SystemError.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\LoggerModule\SystemError.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\SessionManagement\TransactionImplementation.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\SessionManagement\TransactionImplementation.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\Stock\Hashlist.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\Stock\Hashlist.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\Stock\StringArr.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\Stock\StringArr.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HtmlControlList.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HtmlControlList.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\DataGrid\DataGridEx.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\DataGrid\DataGridEx.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\DataList\DataListEx.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\DataList\DataListEx.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\FormView\FormViewEx.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\FormView\FormViewEx.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\GridView\CommandFieldEX.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\GridView\CommandFieldEX.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\GridView\GridViewEx.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\GridView\GridViewEx.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HtmlEvents.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HtmlEvents.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HTMLSELECT\NHtmlSelect.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HTMLSELECT\NHtmlSelect.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HTMLSELECT\NHtmlSelectOptions.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HTMLSELECT\NHtmlSelectOptions.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HTMLTABLE\NHtmlTable.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HTMLTABLE\NHtmlTable.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HTMLTABLE\NHtmlTableCell.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\HTMLTABLE\NHtmlTableCell.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\IJSControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\IJSControl.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSAttributes.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSAttributes.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSScriptLibrary.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSScriptLibrary.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSStyle.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSStyle.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_INPUT.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_INPUT.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_LISTITEM.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_LISTITEM.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_LISTITEMCOLLECTION.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_LISTITEMCOLLECTION.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_RADIO.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_RADIO.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_SELECT.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_SELECT.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_TEXTAREA.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JS_TEXTAREA.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSStringBuilder.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\JSStringBuilder.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\RegisterJS.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\JSCONTROL\RegisterJS.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\NHtmlContainerControl.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\HTMLCONTROL\NHtmlContainerControl.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\LoadingBar\LoadingBar.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\LoadingBar\LoadingBar.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\ObjectDataSource\ObjectParameter.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\ObjectDataSource\ObjectParameter.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\PageModule\BasePage.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\PageModule\BasePage.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\PageModule\ExportPage.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\PageModule\ExportPage.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\Repeater\RepeaterEx.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\Repeater\RepeaterEx.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WebUI\ScriptManager\RWLScriptManager.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WebUI\ScriptManager\RWLScriptManager.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WindowUI\DataGridViewCalendar.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WindowUI\DataGridViewCalendar.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\NeuronCore\WindowUI\DataGridViewProgress.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\NeuronCore\WindowUI\DataGridViewProgress.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\Properties\AssemblyInfo.cs:
+        </strong><span>File successfully backed up as C:\WebDevelopment\Project\PCCW\Project\RETENTION_ZIP\Neuron.Net.EntityFramework\Neuron.Net.EntityFramework\stable\Neuron.Net.EntityFramework\Backup\Neuron.Net.EntityFramework\Properties\AssemblyInfo.cs</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\Neuron.Net.EntityFramework.csproj:
+        </strong><span>Project migrated successfully</span></td></tr><tr name="MessageRowClassNeuron.Net.EntityFramework" style="display: none"><td class="IconInfoEncoded"><a name="Neuron.Net.EntityFrameworkMessage" /></td><td class="messageCell"><strong>Neuron.Net.EntityFramework\Neuron.Net.EntityFramework.csproj:
+        </strong><span>Scan complete: Migration not required for project files.</span></td></tr><tr style="display: none" name="MessageRowHeaderHideNeuron.Net.EntityFramework"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="Neuron.Net.EntityFrameworkMessage" onclick="ToggleMessageVisibility('Neuron.Net.EntityFramework'); return false;">
+          Hide 75 additional messages
+        </a></td></tr></table></div></div></body></html>
