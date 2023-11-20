@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="RWLMenu2.master.cs" Inherits="MasterPage_RWLMenu2" %>
+
+<%@ Register TagPrefix="RWLMenu" TagName="RWLMenu" Src="~/UI/RWLControlMenu.ascx" %>
+<%@ Register Src="../UI/GlobalNavigation2.ascx" TagName="GlobalNavigation" TagPrefix="uc1" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>3G Retention - Web Log</title>
+    <asp:ContentPlaceHolder ID="RWLHeaderContentPlace" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="page-header">
+            <uc1:GlobalNavigation ID="GlobalNavigation1" runat="server" />
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="RWLContentPlace" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

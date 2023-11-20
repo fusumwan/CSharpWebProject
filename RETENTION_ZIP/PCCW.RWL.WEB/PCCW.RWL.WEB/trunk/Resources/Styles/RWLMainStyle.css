@@ -1,0 +1,25 @@
+﻿body {
+}
+/* This is the border line & background colour round the entire page */
+.bodyline{border:1px solid #98aab1; height:100%;}
+
+/* This is the outline round the main forum tables */
+.forumline{border:1px solid #006699}
+
+/* The largest text used in the index page title and toptic title etc. */
+.maintitle,h1{
+font:bold 20px/120% "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;text-decoration:none;color:#5c81b1}
+
+/* Used for the navigation text,(Page 1,2,3 etc) and the navigation bar when in a forum */
+.nav{font-size:11px;font-weight:bold}
+.postbody{font-size:12px;line-height:125%}
+
+/* Category gradients*/
+td.cat{font-weight:bold;letter-spacing:1px;background:#d9e2ec url('../images/cellpic1.gif');
+height:29px;text-indent:4px
+}
+
+/* General text */
+td.gensmall{font-size:10px}
+td.genmed,.genmed{font-size:11px}
+td.explaintitle{font-size:11px;font-weight:bold;color:#5c81b1}

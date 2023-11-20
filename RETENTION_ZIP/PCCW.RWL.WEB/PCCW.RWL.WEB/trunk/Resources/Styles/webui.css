@@ -1,0 +1,132 @@
+﻿ul.CompoundField,
+ul.CompoundField ul
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul.CompoundField li
+{
+	list-style: none;
+	display: block;
+	float: left;
+	margin-right: 4px;
+}
+
+ul.CompoundField li.newline
+{
+	clear: left;
+}
+
+ul.CompoundField li label
+{
+	display: block;
+}
+
+.PostalAddressInputBox .PostalAddressInputBox_Room
+{
+	width: 4em;
+}
+
+.PostalAddressInputBox .PostalAddressInputBox_Floor,
+.PostalAddressInputBox .PostalAddressInputBox_Block
+{
+	width: 3em;
+}
+
+.PostalAddressInputBox .PostalAddressInputBox_Street
+{
+	width: 15em;
+}
+
+.PostalAddressInputBox .PostalAddressInputBox_Building
+{
+	width: 15em;
+}
+
+.DateInputBox .DateInputBox_Year
+{
+	width: 4em;
+}
+
+.CustomerNameInputBox .ctrl-surname
+{
+	width: 8em;
+}
+.CustomerNameInputBox .ctrl-firstname
+{
+	width: 10em;
+}
+
+.IdDocumentInputBox .ctrl-idcanvas
+{
+	white-space: nowrap;
+}
+
+.IdDocumentInputBox .ctrl-idhkno
+{
+	width: 8em;
+}
+
+.IdDocumentInputBox .ctrl-idbracket
+{
+	width: 1em;
+}
+
+.existingLOBinfo 
+{
+	display:none;
+}
+.CheckBoxList
+{
+	display: block;
+}
+
+/* modal dialog */
+
+.modal-background
+{
+	background-color: #cccccc;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+
+}
+
+.modal-dialogbox
+{
+	border: solid 2px #cccccc;
+	background-color: white;
+	padding: 20px;
+}
+
+.PostalAddressViewBox .PostalAddressViewBox_RoomType
+{
+	width: 4em !important;
+}
+
+.PostalAddressViewBox .PostalAddressViewBox_Room
+{
+	width: 4em !important;
+}
+
+.PostalAddressViewBox .PostalAddressViewBox_Floor,
+.PostalAddressViewBox .PostalAddressViewBox_Block
+{
+	width: 3em !important;
+}
+
+.PostalAddressViewBox .PostalAddressViewBox_Street
+{
+	width: 15em !important;
+}
+
+.PostalAddressViewBox .PostalAddressViewBox_Building
+{
+	width: 15em !important;
+}
+
+.PostalAddressViewBox .PostalAddressViewBox_District,
+.PostalAddressViewBox .PostalAddressViewBox_Region
+{
+	width: 10em !important;
+}

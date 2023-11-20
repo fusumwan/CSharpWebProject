@@ -1,0 +1,129 @@
+/* CSS Document */
+*{font-family:Verdana, Arial, Helvetica, sans-serif;}
+body {
+background-color:#EFEFEF;
+margin:0 ;
+padding:0 0 73px 0;
+}
+p, div, ul, li, img, h1, h2, h3 ,a {
+
+		}
+form, label, input {
+
+		}
+
+
+#frame {
+width:713px;
+margin:auto;
+}
+
+#frame1 {
+width:713px;
+margin:auto;
+position:absolute;
+}
+
+.Ts1{ background-color:#DFDFDF; padding 1px 3px 1px 3px;}
+.Ts2{ background-color:White;}
+.Fs1{color:#003333;  font-size:8pt;}
+.Fs2{color:#003333;  font-size:8pt;}
+.Fs3{color:#CC3300; font-weight:bold;  font-size:9pt;}
+
+.spacer{clear: both; font-size: 0px; line-height: 0px; padding: 0; margin: 0;}
+
+.dummy{clear: both;}
+
+/*---------------------------------------------------*/
+#container {width:713px;}
+#container div#pic {width:236px; padding-left:24px; float:left;}
+#container div#text {width:375px; background-image:url(../Images/head_mid.gif); background-repeat:no-repeat; 
+background-position:top left; float:right; padding-right:77px;}
+#container div#text img#title{ padding-left:12px; padding-bottom:0; line-height:0; font-size:0;}
+#container div#dog{width:375px;}
+#container div#text div#left {width:302px; background:url(../Images/top_bg.gif) repeat-y 0 0; padding-top:0px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#121112; float:left; }
+#container div#left p{ width:205px; float:left; margin:60px 0 0 0 ;}
+#container div#left p span{ color:#CD8D59}
+#container div#left img#dog1{float:left; margin:0 0 0 0; clear:right;}
+#container div#text1 {width:375px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#121112; 
+line-height:14px; font-weight:normal; clear:both;}
+#container div#text1 span{ color:#CD8D59;}
+/*---------------------------------------------------*/
+
+
+/*----------------------------------------------------*/
+#menutable {width:711px; height:28px; background-image: url(../Images/menu-back.gif); background-repeat: repeat-x; padding:0; margin: 0 auto; border: 1px solid #C2C1C1;}
+#menutable a{display: block; background-image:url(../Images/menu-divider.gif); background-repeat: no-repeat; background-position: right bottom; font-size:9px; color:#4A4545; font-weight:bold; text-decoration: none; padding: 0; margin: 0; padding: 8px 21px; float: left;}
+#menutable a.end{display: block; background-image:none; font-size:9px; color:#4A4545; font-weight:bold; text-decoration: none; margin: 0; padding: 8px 18px; float: left;}
+/*#menu a.start{padding:0 28px 0 16px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px; color:#4A4545; font-weight:bold; text-decoration:none;}*/
+#menutable a:hover{text-decoration:underline;}
+/*--------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+#container3 {width:713px; padding:0; margin:0; /*background-color:#FF0000;*/}
+#container31 {width:713px; padding:11px 0; margin:0 auto; /*background-color:#FF0000;*/}
+/*--------------------------------------------------------*/
+
+/*--------------------------------------------------------*/
+#container3a {width:201px; float:left; background-image:url(../Images/left_.gif); background-repeat:repeat-y; background-position:top right; padding-left:8px; padding-right:14px; padding-bottom:5px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#302F2F; line-height:14px;}
+#container3a h2{background-image: url(../Images/deflamation_blog.gif); background-repeat: no-repeat; width: 121px; height: 43px; margin: 0 0 5px 0; padding: 0; text-indent: -2000px;}
+#container3a h3{background-image: url(../Images/click.gif); background-repeat: no-repeat; width: 118px; height: 15px; margin: 0; padding: 0 0 6px 0; text-indent: -2000px;}
+#container3a .orange{color:#CD8551; text-decoration:none; padding:0 0 12px 0; margin:0;}
+#container3a .orange:hover{text-decoration:underline; color:#CD8551;}
+/*#container3a a{font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#1E1C1C; text-decoration:underline; font-weight:normal;} 
+#container3a a:hover {font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#1E1C1C; text-decoration:none; font-weight:normal;line-height:20px;}*/
+
+ul#menu1{width:175px; padding:0 0 10px 0; margin:0; list-style-type:none;}
+ul#menu1 li{padding: 4px 0; margin: 0; list-style-type: none;}
+ul#menu1 li a{display: block; background-image:url(../Images/icon_arrow.gif); background-repeat: no-repeat; background-position:3% 70%; padding:0 0 0 20px; margin:0; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:underline; font-weight:normal;}
+ul#menu1 li a:hover{text-decoration:none;}
+
+/*---------------------------------------------------------*/
+
+/*---------------------------------------------------------*/
+#container3b {width:490px; float:right; /*background-color:#996699;*/}
+/*----------------------------------------------------------*/
+
+/*----------------------------------------------------------*/
+#container3b div#information{width:250px; padding-left:14px; padding-right:5px; background-image:url(../Images/left_.gif); background-repeat:repeat-y; background-position:top right; float:left; padding-top:4px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#1A131A; font-weight:normal; line-height:14px;}
+#container3b div#information .grey{font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px; color:#858383; font-weight:bold; line-height:14px;}
+#container3b div#information .dgrey{font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#4F4D4D; font-weight:normal; line-height:14px; text-decoration:underline;}
+#container3b div#information .dgrey:hover{color:#8F8F8F; text-decoration:none;}
+#container3b div#information .dgrey1{font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#4F4D4D; font-weight:normal; line-height:14px; text-decoration:none;}
+#container3b div#information h2{background-image: url(../Images/d.information.gif); background-repeat: no-repeat; width: 212px; height: 24px; margin: 0 0 5px 0; padding: 0; text-indent: -2000px;}
+#container3b div#information div#dog{width:250px; padding-top:8px; padding-bottom:10px; padding-left:11px;}
+#container3b div#information div#dog01{width:250px; padding-top:8px; padding-bottom:10px; padding-left:11px;}
+#container3b div#information h3{background-image:url(../Images/about.gif); width:116px; height:15px; background-repeat: no-repeat;  margin: 0 0 5px 0; padding: 0; text-indent: -2000px;}
+#container3b div#information .text{margin:0; padding:6px 0 16px 0;}
+/*------------------------------------------------------------*/
+
+/*----------------------------------------------------------*/
+#container3b div#login{width:189px; float:left; padding:0 0 0 19px; /*background-color:#00FF00;*/ font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#302F2F; line-height:14px; font-weight:normal; margin:0;}
+#container3b div#login h2{color: #C68B55; padding: 0; margin: 4px 0; font-size: 11px;}
+#container3b div#login form{margin: 0; padding: 0 0 28px 0;}
+#container3b div#login input.txt1{background-color: #f6f6f6; border: 1px solid #c9c9c9; font-size: 12px; color: #666666; width: 150px; margin: 0 0 10px 0;}
+#container3b div#login .contribute{width:173px; margin: 0; padding: 0 0 12px 0; background-image:url(../Images/contribut.jpg); background-repeat:no-repeat;}
+#container3b div#login input.txt2{background-color: #EBEBEB; border: 1px solid #691B09; font-size: 12px; color: #666666; width: 71px; height:20px; margin: 59px 0 5px 64px; padding:0;}
+#container3b div#login .btn{padding: 0 0 5px 37px; margin:0;}
+#container3b div#login div#for{width:173px; padding:0; margin:0;}
+#container3b div#login a{font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#100903; text-decoration:underline; font-weight:normal; margin: 0; padding: 0 0 0 21px;}
+#container3b div#login a:hover{color:#522907; text-decoration:none; font-weight:normal;}
+#container3b div#login h3{background-image:url(../Images/new_dalmatians.gif); width:182px; height:43px; background-repeat:no-repeat; background-position:center left; text-indent:-2000px; margin:0; padding:10px 0 10px 0;}
+#container3b div#login .click{font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#100903; text-decoration:underline; font-weight:normal; margin: 0; padding: 0 0 0 2px;}
+#container3b div#login .click:hover{color:#522907; text-decoration:none; font-weight:normal;}
+#container3b div#login .txt3{margin:0; padding:0 0 4px 0;}
+/*----------------------------------------------------------*/
+
+#footer {width:713px; padding:0; margin:0; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px; color:#C9C5C5; font-weight:normal; line-height:14px; text-decoration:none;}
+#footer div#container{width:615px;  padding:14px 49px 19px 49px; margin:0; background-color:#000000;}
+#footer div#container01{width:615px;  padding:14px 49px 19px 49px; margin:0; background-color:#000000;}
+#footer div#container01 div.right{width:315px; text-align:right; padding:18px 0 6px 295px; margin:0; font-weight:normal;}
+div.right a{ font-size:9px; color:#C9C5C5; font-weight:bold; text-decoration: none; }
+div.right a:hover{text-decoration:underline;}
+#menu2 {width:615px; padding:0; margin:0; text-align:center; clear:both;}
+#menu2 a{border-right:1px solid #C9C5C5; font-size:9px; color:#C9C5C5; font-weight:bold; text-decoration: none; margin: 0; padding: 0 14px 0 14px;}
+#menu2 a:hover{ text-decoration:underline;}
+#menu2 a.start{border-right:1px solid #C9C5C5; font-size:9px; color:#C9C5C5; font-weight:bold; text-decoration: none; margin: 0; padding: 0 14px 0 0;}
+#menu2 a.start:hover{ text-decoration:underline;}
+#menu2 a.end{font-size:9px; color:#C9C5C5; font-weight:bold; text-decoration: none; margin: 0; padding: 0 0 0 14px; border:0px;}
+#menu2 a.end:hover{ text-decoration:underline;}

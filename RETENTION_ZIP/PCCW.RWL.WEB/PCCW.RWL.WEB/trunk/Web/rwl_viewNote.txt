@@ -1,0 +1,221 @@
+﻿128 column
+Account No. 10
+LOB Account No 20
+Free Monthly Fee 30
+Free Gift Description3 40
+Football Unlimited 50
+Connection Tone 60
+Additional Video Call Minutes 70
+HS Model  80
+Delivery Charge for special region  90
+HS Amount 100
+
+
+if (WebFunc.qsLog_date != null)
+        {
+            DateTime _oDate = Convert.ToDateTime(WebFunc.qsLog_date);
+            DateTime _dTmp = new DateTime(_oDate.Year, _oDate.Month, _oDate.Day, 0, 0, 0);
+            _oRwlOrderList = _oRwlOrderList.Where(c => CompareDate(c.log_date, _oDate) >= 0).Select(c => c);
+        }
+
+        if (WebFunc.qsLog_date2 != null)
+        {
+            DateTime _oDate = Convert.ToDateTime(WebFunc.qsLog_date2);
+            DateTime _dTmp = new DateTime(_oDate.Year, _oDate.Month, _oDate.Day,23,59,59);
+
+            _oRwlOrderList = _oRwlOrderList.Where(c => (CompareDate(c.log_date, _dTmp) <= 0 && CompareDate(c.log_date, _dTmp)>=-1)).Select(c => c);
+        }
+
+        if(WebFunc.qsVas_eff_date!=null)
+        {
+            DateTime _oDate = Convert.ToDateTime(WebFunc.qsVas_eff_date);
+            DateTime _dTmp = new DateTime(_oDate.Year, _oDate.Month, _oDate.Day, 0, 0, 0);
+            _oRwlOrderList = _oRwlOrderList.Where(c => CompareDate(c.m_dVas_eff_date, _dTmp) >= 0).Select(c => c);
+        }
+        if (WebFunc.qsVas_eff_date2 != null)
+        {
+
+            DateTime _oDate = Convert.ToDateTime(WebFunc.qsVas_eff_date2);
+            DateTime _dTmp = new DateTime(_oDate.Year, _oDate.Month, _oDate.Day, 23, 59, 59);
+            _oRwlOrderList = _oRwlOrderList.Where(c => (CompareDate(c.m_dVas_eff_date, _dTmp) <= 0 && CompareDate(c.m_dVas_eff_date, _dTmp)>=-1)).Select(c => c);
+        }
+        if (!"".Equals(WebFunc.qsPlan_eff_date))
+        {
+            DateTime _oDate = Convert.ToDateTime(WebFunc.qsPlan_eff_date);
+            DateTime _dTmp = new DateTime(_oDate.Year, _oDate.Month, _oDate.Day, 0, 0, 0);
+            _oRwlOrderList = _oRwlOrderList.Where(c => CompareDate(c.m_dVas_eff_date, _dTmp) >= 0).Select(c => c);
+        }
+
+        if (WebFunc.qsPlan_eff_date2!=null)
+        {
+            DateTime _oDate = Convert.ToDateTime(WebFunc.qsPlan_eff_date2);
+            DateTime _dTmp = new DateTime(_oDate.Year, _oDate.Month, _oDate.Day, 23, 59, 59);
+            _oRwlOrderList = _oRwlOrderList.Where(c => (CompareDate(c.m_dPlan_eff_date, _dTmp) <= 0 && CompareDate(c.m_dPlan_eff_date, _dTmp)>=-1)).Select(c => c);
+        }
+
+        if (WebFunc.qsCon_eff_date != null)
+        {
+            DateTime _oDate =Convert.ToDateTime(WebFunc.qsCon_eff_date);
+            DateTime _dTmp = new DateTime(_oDate.Year, _oDate.Month, _oDate.Day, 0, 0, 0);
+            _oRwlOrderList = _oRwlOrderList.Where(c => CompareDate(c.con_eff_date, _dTmp) >= 0).Select(c => c);
+        }
+        if (WebFunc.qsCon_eff_date2 != null)
+        {
+            DateTime _oDate = Convert.ToDateTime(WebFunc.qsCon_eff_date2);
+            DateTime _dTmp = new DateTime(_oDate.Year, _oDate.Month, _oDate.Day, 23, 59, 59);
+            _oRwlOrderList = _oRwlOrderList.Where(c => (CompareDate(c.con_eff_date, _dTmp) <= 0 && CompareDate(c.con_eff_date, _dTmp)>=-1)).Select(c => c);
+
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                  <EW:RepeaterEx ID="RetentionOrderViewRP" runat="server" >
+              <ItemTemplate>
+              <tr>
+              
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="RetentionOrderViewRP_id" runat="server"></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><a href="SearchRetentionOrderViewDetail.aspx?order_id=<%# Func.IDAdd100000(DataBinder.Eval(Container.DataItem,"order_id"))%>"><%# Func.IDAdd100000(DataBinder.Eval(Container.DataItem,"order_id"))%></a></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="active" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"active")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="report_type" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"order_id")%>'></asp:Literal><a href="#" onclick='window.open("AdminViewHistoryImplement.aspx?order_id=<%# DataBinder.Eval(Container.DataItem,"order_id")%>","_blank","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=300")'><%# DataBinder.Eval(Container.DataItem, "order_status")%></a></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="edf_no" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"edf_no")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="old_ord_id" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"old_ord_id")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="log_date" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"log_date")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="cust_name" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "family_name") +" "+DataBinder.Eval(Container.DataItem, "given_name")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="cust_type" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"cust_type")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="ac_no" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ac_no")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="mrt_no" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"mrt_no")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="hkid" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"hkid")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="vip_case" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"vip_case")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="exist_cust_plan" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"exist_cust_plan")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="org_fee" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"org_fee")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="accept" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"accept")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="program" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"program")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="rate_plan" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"rate_plan")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="lob" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"lob")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="lob_ac" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"lob_ac")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="con_per" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"con_per")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="trade_field" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"trade_field")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="bundle_name" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"bundle_name")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="rebate" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"rebate")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="m_rebate_amount" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"m_rebate_amount")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="rebate_amount" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"rebate_amount")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="r_offer" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"r_offer")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="extra_rebate" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"extra_rebate")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="extra_rebate_amount" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"extra_rebate_amount")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="free_mon" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"free_mon")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="cancel_renew" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"cancel_renew")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_code" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_code")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_imei" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_imei")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_desc" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_desc")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_code2" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_code2")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_imei2" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_imei2")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_desc2" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_desc2")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_code3" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_code3")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_imei3" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_imei3")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_desc3" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_desc3")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_code4" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_code4")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_imei4" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_imei4")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gift_desc4" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gift_desc4")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="accessory_code" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"accessory_code")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="rwl_accessory_imei" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"accessory_imei")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="accessory_desc" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"accessory_desc")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="accessory_price" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"accessory_price")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="aig_gift" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"aig_gift")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="now_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"now_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="foot_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"foot_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="fin_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"fin_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="horse_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"horse_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="moov_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"moov_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="gprs_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"gprs_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="wifi_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"wifi_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="special_approval" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"special_approval")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="sms_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"sms_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="now_mobile_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"now_mobile_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="msn_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"msn_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="ct_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ct_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="now_hd_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"now_hd_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="vm_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"vm_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="min_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"min_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="min_vas200" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"min_vas200")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="min_vas300" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"min_vas300")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="min_vas400" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"min_vas400")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="min_vas500" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"min_vas500")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="min_vas600" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"min_vas600")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="idd_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"idd_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="vmin_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"vmin_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="mcam_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"mcam_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="license_waiver" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"license_waiver")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="net_vas" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"net_vas")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="imin_vas400" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"imin_vas400")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="fast_start" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"fast_start")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="vas_eff_date" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"vas_eff_date")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="plan_eff" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"plan_eff")%>'></asp:Literal><asp:Literal ID="Literal1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"plan_eff_date")%>'></asp:Literal></span></td>              
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="con_eff_date" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"con_eff_date")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="pos_ref_no" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"pos_ref_no")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="hs_model" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"hs_model")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="sku" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"sku")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="imei_no" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"imei_no")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="premium" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"premium")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="s_premium" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"s_premium")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="sp_d_date" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"sp_d_date")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="sp_ref_no" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"sp_ref_no")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="s_premium2" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"s_premium2")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="d_address" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"d_address")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="d_date" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"d_date")%>'></asp:Literal> <asp:Literal ID="Literal2" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"d_time")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="extra_d_charge" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"extra_d_charge")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="contact_person" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"contact_person")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="contact_no" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"contact_no")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="pay_method" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"pay_method")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="card_type" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"card_type")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="card_no" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"card_no")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="card_holder" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"card_holder")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="card_exp_month" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"card_exp_month")%>'></asp:Literal>/<asp:Literal ID="card_exp_year" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"card_exp_year")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="bank_code" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"bank_code")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="bank_name" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"bank_name")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="amount" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"amount")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="remarks" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"remarks")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="remarks2EDF" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"remarks2EDF")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="remarks2PY" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"remarks2PY")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="action_required" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"action_required")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="waive" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"waive")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="action_eff_date" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"action_eff_date")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="exist_plan" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"exist_plan")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="reasons" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"reasons")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="staff_no" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"staff_no")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="staff_name" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"staff_name")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="teamcode" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"teamcode")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="tl_name" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"tl_name")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="salesmancode" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"salesmancode")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="ref_staff_no" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ref_staff_no")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="ref_salesmancode" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ref_salesmancode")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="channel" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"channel")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="ob_program_id" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ob_program_id")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="existing_contract_end_date" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"existing_contract_end_date")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="ord_place_by" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ord_place_by")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="ord_place_by2" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ord_place_by")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="ord_place_id_type" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ord_place_id_type")%>'></asp:Literal>&nsbp;<asp:Literal ID="ord_place_hkid" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ord_place_hkid")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="ord_place_tel" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ord_place_tel")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="ext_place_tel" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"ext_place_tel")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="monthly_payment_method" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"monthly_payment_method")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="m_card_type" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"m_card_type")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="m_card_no" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"m_card_no")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="m_card_holder2" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"m_card_holder2")%>'></asp:Literal></span></td>
+              <td nowrap="nowrap" class="row2"><span class="gensmall" style="font-size:7pt"><asp:Literal ID="m_card_exp_month" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"m_card_exp_month")%>'></asp:Literal>/<asp:Literal ID="m_card_exp_year" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"m_card_exp_year")%>'></asp:Literal></span></td>
+              
+              </tr>
+              </ItemTemplate>
+              </EW:RepeaterEx>

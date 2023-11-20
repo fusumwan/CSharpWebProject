@@ -1,0 +1,35 @@
+﻿.CustomerContactInputBox_Phone {
+	width: 6em;
+}
+
+.CustomerContactInputBox_Email {
+	width: 15em;
+}
+
+.updateprogressfloat
+{
+	position: absolute;
+}
+
+.validation-wrong 
+{
+	display: inline-block;
+	color: red;
+	font-weight: bold;
+	height: 15px;
+	background-image: url('../Images/silk/exclamation.png');
+	background-repeat: no-repeat;
+	padding-left: 18px;
+}
+
+.validation-block
+{
+	display: block;
+	clear: both;
+}
+
+.PostalAddressViewBox div
+{
+	border-bottom: solid 1px #ffffff;
+}
+

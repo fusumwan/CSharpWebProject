@@ -1,0 +1,186 @@
+﻿using System;
+using System.Collections;
+using System.Collections.ObjectModel;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Text;
+using System.Xml.Linq;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using PCCW.RWL.CORE;
+using PCCW.RWL.CORE.SERIAL;
+using PCCW.RWL.CORE.WEBFUNC;
+using NEURON.ENTITY.FRAMEWORK;
+using NEURON.ENTITY.FRAMEWORK.SESSIONFACTORY;
+using NEURON.ENTITY.FRAMEWORK.CONNECT;
+using log4net;
+using System.Reflection;
+
+
+
+public partial class RetrieveOptOutViewExport : NEURON.WEB.UI.BasePage
+{
+    #region Logger Setup
+    protected static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+    #endregion
+    MSSQLConnect n_oDB = new MSSQLConnect();
+    BusinessVasDescriptionRepositoryBase _oBusinessVasDescriptionRepositoryBase = BusinessVasDescriptionRepositoryBase.Instance();
+    ProfileTeamDetailRepositoryBase _oProfileTeamDetailRepositoryBase = ProfileTeamDetailRepositoryBase.Instance();
+    MobileRetentionOrderRepositoryBase n_oMobileRetentionOrderRepositoryBase = MobileRetentionOrderRepositoryBase.Instance();
+    Hashtable n_oVim_vas_desc = new Hashtable();
+    Hashtable n_oMcam_vas_desc = new Hashtable();
+    Hashtable n_oNet_vas_desc = new Hashtable();
+    Hashtable n_oNow_hd_vas_desc = new Hashtable();
+    Hashtable n_oGprs_vas_desc = new Hashtable();
+    Hashtable n_oSms_vas_desc = new Hashtable();
+    Hashtable n_oVm_vas_desc = new Hashtable();
+    VasCreateHolderControl n_oVasCreateHolderControl = VasCreateHolderControl.Instance();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        WebFunc.PrivilegeCheck(this.Page);
+        if (!IsPostBack) InitFrame();
+        WebFunc.ExportExcel(this.Page, "RetentionOrderExcelResult.xls");
+    }
+
+    #region InitFrame
+    protected void InitFrame()
+    {
+
+       
+        StringBuilder _oQuery = new StringBuilder();
+        _oQuery.Append("select a.*, b.mid, b.email_date, b.report_type, b.fallout_remark, b.fallout_reply, b.order_status, b.fallout_main_category , b.fallout_reason, b.retrieve_sn, b.retrieve_date, b.cid as admin_sn, b.cdate as admin_date from " + Configurator.MSSQLTablePrefix + "MobileRetentionOrder a with (nolock), " + Configurator.MSSQLTablePrefix + "MobileOrderReport b with (nolock) where a.order_id=b.order_id and b.active=1 and a.action_required='opt_out'  and retrieve_date is null ");
+        if (Func.RB(WebFunc.qsOrder_id) && (Func.RB(WebFunc.qsOrder_id2) && !WebFunc.qsOrder_id2.Equals(string.Empty)))
+            _oQuery.Append(" and a.order_id>='" + Func.IDSubtract100000(WebFunc.qsOrder_id).ToString() + "'");
+        else if (Func.RB(WebFunc.qsOrder_id))
+            _oQuery.Append(" and a.order_id='" + Func.IDSubtract100000(WebFunc.qsOrder_id).ToString() + "'");
+
+        if (Func.RB(WebFunc.qsOrder_id2))
+            _oQuery.Append(" and a.order_id<='" + Func.IDSubtract100000(Convert.ToInt32(WebFunc.qsOrder_id2)).ToString() + "'");
+
+        if (Func.RB(WebFunc.qsEmail_date))
+            _oQuery.Append(" and b.email_date>='" + ((DateTime)WebFunc.qsEmail_date).ToString("yyyyMMdd") + " 00:00'");
+
+        if (Func.RB(WebFunc.qsEmail_date2))
+            _oQuery.Append(" and b.email_date<='" + ((DateTime)WebFunc.qsEmail_date2).ToString("yyyyMMdd") + " 23:59'");
+
+        /* Added on 16DEC2010 by Ben
+* Normal Search: by D_date, Plan_eff_date
+* Special PY Rule: D_date+1 if D_date is earlier, Plan_eff_date+3 if Plan_eff_date is earlier */
+
+        _oQuery.Append(PYReportFunc.appendDDate_PlanEffDateToReportSQL((DateTime?)WebFunc.qsD_date, (DateTime?)WebFunc.qsD_date2, (DateTime?)WebFunc.qsPlan_eff_date, (DateTime?)WebFunc.qsPlan_eff_date2, (HttpContext.Current.Request["D_datePlan_eff_dateRule"] != null)));
+
+        /* End */
+
+        /* Added on 31DEC2010 by Ben
+* For rwl_w_hs : amount>0 or amount=0 */
+
+        string _sHandset_amount = (HttpContext.Current.Request["handset_amount"] == null ? "" : HttpContext.Current.Request["handset_amount"]);
+        _oQuery.Append(PYReportFunc.appendHSAmountSQL(_sHandset_amount));
+
+        /* End */
+
+        if (Func.RB(WebFunc.qsMrt_no))
+            _oQuery.Append(" and a.mrt_no='" + WebFunc.qsMrt_no.ToString() + "'");
+
+
+
+
+        if (!WebFunc.qsGo_wireless.Equals("ALL"))
+        {
+            if (WebFunc.qsGo_wireless.Equals("YES"))
+                _oQuery.Append(" AND (a.go_wireless is not null AND a.go_wireless <>'NO' AND  a.go_wireless <>'') ");
+            else if (WebFunc.qsGo_wireless.Equals("NO"))
+                _oQuery.Append(" AND (a.go_wireless is null or a.go_wireless ='NO' or a.go_wireless='') ");
+        }
+
+        if (Func.RB(WebFunc.qsRetrieve_id))
+            _oQuery.Append(" AND b.mid in (" + WebFunc.qsRetrieve_id.ToString() + ") ");
+        _oQuery.Append(" and a.program<>'MOBILE LITE (SIM ONLY)' and a.program<>'MOBILE LITE (HS OFFER)'");
+        _oQuery.Append(" order by a.order_id");
+        SqlDataReader _oDr = GetDB().GetSearch(_oQuery.ToString());
+        admin_view_rp.DataSource = _oDr;
+        admin_view_rp.DataBind();
+        if (_oDr != null) _oDr.Close();
+
+        if (!RWLFramework.CurrentUser[this.Page].Uid.Equals("A8350006") &&
+           !RWLFramework.CurrentUser[this.Page].Uid.Equals("1022243"))
+        {
+            RecordRetrieve();
+        }
+    }
+    #endregion
+
+    #region RecordRetrieve
+    protected void RecordRetrieve()
+    {
+        if (!WebFunc.qsRetrieve_id.Equals(string.Empty))
+        {
+            StringBuilder _oQuery1 = new StringBuilder();
+            _oQuery1.Append("INSERT INTO " + Configurator.MSSQLTablePrefix + "MobileOrderReportHistory(rec_no,order_id,email_date,report_type,order_status,fallout_reason,fallout_reply,fallout_remark,retrieve_sn,retrieve_date,active,cid,cdate,did,ddate,idd_vas,ext_place_tel,reactive_sn,reactive_date) ");
+            _oQuery1.Append("SELECT mid,order_id,email_date,report_type,order_status,fallout_reason,fallout_reply,fallout_remark,retrieve_sn,retrieve_date,active,cid,cdate,'" + RWLFramework.CurrentUser[this.Page].Uid.ToString() + "',getdate(),idd_vas,ext_place_tel ,reactive_sn,reactive_date  FROM " + Configurator.MSSQLTablePrefix + "MobileOrderReport ");
+            _oQuery1.Append(" WHERE mid in (" + WebFunc.qsRetrieve_id.ToString() + ") ");
+            SYSConn<MSSQLConnect>.Connect().ExplicitNonQuery(_oQuery1.ToString());
+
+            StringBuilder _oQuery2 = new StringBuilder();
+            _oQuery2.Append("UPDATE " + Configurator.MSSQLTablePrefix + "MobileOrderReport SET retrieve_sn='" + RWLFramework.CurrentUser[this.Page].Uid.ToString() + "',retrieve_date=getdate() WHERE mid in (" + WebFunc.qsRetrieve_id.ToString() + ")");
+            SYSConn<MSSQLConnect>.Connect().ExplicitNonQuery(_oQuery2.ToString());
+        }
+    }
+    #endregion
+
+    #region GetDB
+    protected MSSQLConnect GetDB()
+    {
+        MSSQLConnect _oDB = new MSSQLConnect();
+        _oDB.SetConnStr(Configurator.DBName.MobileRetentionOrderDB + ((Configurator.IsUat()) ? "2" : string.Empty));
+        _oDB.bWithNoLock = true;
+        return _oDB;
+    }
+    #endregion
+
+    #region Get Oracle DB
+    protected ODBCConnect GetORDB()
+    {
+        ODBCConnect _oDB = new ODBCConnect();
+        _oDB.SetConnStr(Configurator.DBName.ORADNS + ((!"".Equals(Configurator.IsUat())) ? "2" : string.Empty));
+        return _oDB;
+    }
+    #endregion
+
+    protected void admin_view_rp_ItemDataBound(object sender, RepeaterItemEventArgs e)
+    {
+        if (!e.Item.ItemIndex.Equals(-1))
+        {
+            int _iOrderID = e.Item.ItemIndex + 1;
+            Literal _oViewid = (Literal)e.Item.FindControl("viewid");
+            _oViewid.Text = _iOrderID.ToString();
+
+            /*
+            Literal _oLicense_waiver = (Literal)e.Item.FindControl("license_waiver");
+            if (_oLicense_waiver.Text.Length > 1)
+                _oLicense_waiver.Text = _oLicense_waiver.Text.Substring(0, 1);
+            */
+
+            Literal _oWaive = (Literal)e.Item.FindControl("waive");
+            if ("TRUE".Equals(_oWaive.Text.ToUpper()) || "1".Equals(_oWaive.Text.ToUpper()))
+                _oWaive.Text = "YES";
+            else
+                _oWaive.Text = "NO";
+
+
+
+
+            Literal _oOld_ord_id = (Literal)e.Item.FindControl("old_ord_id");
+            if (!"0".Equals(_oOld_ord_id.Text) && !"".Equals(_oOld_ord_id.Text.Trim()))
+                _oOld_ord_id.Text = Func.IDAdd100000(Convert.ToInt32(_oOld_ord_id.Text));
+        }
+    }
+}

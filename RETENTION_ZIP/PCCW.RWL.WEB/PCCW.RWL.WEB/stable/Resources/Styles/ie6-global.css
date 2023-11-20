@@ -1,0 +1,15 @@
+﻿div#left-pane {
+	position: absolute;
+	float: none;
+    /* IE5.5+/Win - this is more specific than the IE 5.0 version */
+    left: expression( ( ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+    top: expression( ( 80 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+#global-loading {
+	position: absolute;
+	float: none;
+    /* IE5.5+/Win - this is more specific than the IE 5.0 version */
+    left: expression( ( ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+    top: expression( ( ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}

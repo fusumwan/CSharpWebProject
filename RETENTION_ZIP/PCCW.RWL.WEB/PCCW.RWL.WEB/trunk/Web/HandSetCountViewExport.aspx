@@ -1,0 +1,17 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="HandSetCountViewExport.aspx.cs" Inherits="HandSetCountViewExport" %>
+<%@ Import Namespace="PCCW.RWL.CORE.WEBFUNC" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+</head>
+
+
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <asp:PlaceHolder ID="hs_count_placeholder" runat="server"></asp:PlaceHolder>    
+    </div>
+    </form>
+</body>
+</html>
